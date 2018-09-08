@@ -1,0 +1,26 @@
+Stacks, Queues and Dequeues
+
+What is the difference between an abstract data type and an implementation of a data structure?
+ * ADT defines operations that can be performed, not how they are implemented. Implementation of the operations can have different runtimes
+
+Consider two implementations of the queue abstract data type, one implemented using a dynamic array and the other as a doubly linked list. What is the Big O complexity of the push and pop operations? Other than Big O complexity, can you think of any potential performance differences between the two?
+  * dynamic array Insert = O(n), Pop = O(1)
+  * doubly linked list Insert = O(1), Pop=O(1)
+  * Other performance differences: ??
+
+
+Hashes
+  * Do we have to worry about clustering if we use a better hash function(SHA-256)?
+  * How do we store meta data about the entry to know when to resolve collisions?
+
+
+
+  What are the trade-offs being made between chaining and linear probing? Which of these do you think is more commonly used?
+    * Chaining - with a low load factor there are not likely to be many collisions and the average case search is better. Worst case search with lots
+       of collisions is much worse
+    * Linear probing is more efficient in the worst case scenario
+
+
+  Considering a hash map that uses chaining, when should the underlying array grow? What about for one that uses linear probing?
+    * Chaining: array does not need to grow because we can add new items to the linked list in each bucket
+    * Linear probing: Array should grow when it is full so we can accomodate more items
